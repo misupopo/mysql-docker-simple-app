@@ -1,0 +1,19 @@
+version: "3"
+services:
+  sample-msyql:
+    image : mysql:5.7
+    container_name: sample-msyql
+    ports:
+      - "3306:3306"
+    volumes:
+      # dbのデータをlocalに保存する
+      - ./db/mysql:/var/lib/mysql
+      - ./config.cnf:/etc/mysql/conf.d/config.cnf
+      - ./init-dump:/docker-entrypoint-initdb.d
+    environment:
+      TERM: xterm
+      APP_ENV: dev
+      MYSQL_USER: test
+      MYSQL_PASSWORD: test123
+      MYSQL_DATABASE: counter
+      MYSQL_ROOT_PASSWORD: root
