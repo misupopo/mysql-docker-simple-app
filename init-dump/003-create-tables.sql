@@ -10,6 +10,7 @@ create table IF not exists `sample3`
     `name`  varchar(64) NOT NULL,
     `detail`  varchar(64) NOT NULL,
     `attribute`  varchar(64) NOT NULL,
+    `option`  varchar(64) NOT NULL,
     PRIMARY KEY (`id`)
 ) DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
