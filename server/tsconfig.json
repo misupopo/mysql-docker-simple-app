@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "allowJs": true,
+    "alwaysStrict": true,
+    "skipLibCheck": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "baseUrl": "./src",
+    "outDir": "./dist",
+    "paths": {
+      "@/*": ["./*"]
+    }
+  },
+  "include": ["./**/*.ts", "./**/*.js"]
+}
