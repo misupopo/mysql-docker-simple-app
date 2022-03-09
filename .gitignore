@@ -1,2 +1,5 @@
 *.log
 db
+server/node_modules
+mirrorfit-personal-tables.sql
+.env

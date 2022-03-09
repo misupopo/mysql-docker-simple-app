@@ -1,0 +1,23 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ts-node -r tsconfig-paths/register -r dotenv/config --files main.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "tsconfig-paths": "^3.13.0"
+  },
+  "devDependencies": {
+    "@prisma/client": "^3.10.0",
+    "@types/node": "^16.11.26",
+    "prettier": "^2.5.1",
+    "prisma": "^3.10.0",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.2"
+  }
+}
