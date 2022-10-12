@@ -1,8 +1,8 @@
 version: "3"
 services:
-  sample-msyql:
-    image : mysql:latest
-    container_name: sample-msyql
+  sample-mysql:
+    image : mysql:8-debian
+    container_name: sample-mysql
     ports:
       - "3306:3306"
     volumes:
@@ -19,4 +19,12 @@ services:
       MYSQL_USER: test
       MYSQL_PASSWORD: test1234
       MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
-
+    networks:
+      application:
+        ipv4_address: 172.30.0.2
+networks:
+  application:
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.30.0.0/24
