@@ -8,3 +8,9 @@ remove-db: ## dbの情報を削除
 help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}'
 
+.PHONY: mysql
+
+# MySQLにアクセスするためのコマンド
+access-test:
+	@echo "Accessing MySQL in container..."
+	@docker exec -it sample-mysql mysql -u test -ptest1234 test
